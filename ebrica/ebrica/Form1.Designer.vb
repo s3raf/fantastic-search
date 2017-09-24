@@ -25,8 +25,14 @@ Partial Class Form1
         Me.btmExit = New System.Windows.Forms.Button()
         Me.gbxUTEC = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txbNumero = New System.Windows.Forms.TextBox()
+        Me.gbxRicerca = New System.Windows.Forms.GroupBox()
+        Me.lbl01 = New System.Windows.Forms.Label()
+        Me.txbUtente = New System.Windows.Forms.TextBox()
+        Me.lbl02 = New System.Windows.Forms.Label()
         Me.gbxUTEC.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbxRicerca.SuspendLayout()
         Me.SuspendLayout()
         '
         'btmExit
@@ -57,6 +63,51 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(365, 193)
         Me.DataGridView1.TabIndex = 0
         '
+        'txbNumero
+        '
+        Me.txbNumero.Location = New System.Drawing.Point(5, 46)
+        Me.txbNumero.Name = "txbNumero"
+        Me.txbNumero.Size = New System.Drawing.Size(59, 20)
+        Me.txbNumero.TabIndex = 2
+        '
+        'gbxRicerca
+        '
+        Me.gbxRicerca.Controls.Add(Me.lbl02)
+        Me.gbxRicerca.Controls.Add(Me.lbl01)
+        Me.gbxRicerca.Controls.Add(Me.txbUtente)
+        Me.gbxRicerca.Controls.Add(Me.txbNumero)
+        Me.gbxRicerca.Location = New System.Drawing.Point(12, 441)
+        Me.gbxRicerca.Name = "gbxRicerca"
+        Me.gbxRicerca.Size = New System.Drawing.Size(180, 92)
+        Me.gbxRicerca.TabIndex = 3
+        Me.gbxRicerca.TabStop = False
+        Me.gbxRicerca.Text = "Ricerca"
+        '
+        'lbl01
+        '
+        Me.lbl01.AutoSize = True
+        Me.lbl01.Location = New System.Drawing.Point(6, 30)
+        Me.lbl01.Name = "lbl01"
+        Me.lbl01.Size = New System.Drawing.Size(44, 13)
+        Me.lbl01.TabIndex = 4
+        Me.lbl01.Text = "Numero" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'txbUtente
+        '
+        Me.txbUtente.Location = New System.Drawing.Point(70, 46)
+        Me.txbUtente.Name = "txbUtente"
+        Me.txbUtente.Size = New System.Drawing.Size(104, 20)
+        Me.txbUtente.TabIndex = 3
+        '
+        'lbl02
+        '
+        Me.lbl02.AutoSize = True
+        Me.lbl02.Location = New System.Drawing.Point(67, 30)
+        Me.lbl02.Name = "lbl02"
+        Me.lbl02.Size = New System.Drawing.Size(39, 13)
+        Me.lbl02.TabIndex = 5
+        Me.lbl02.Text = "Utente"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -64,10 +115,13 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(922, 545)
         Me.Controls.Add(Me.gbxUTEC)
         Me.Controls.Add(Me.btmExit)
+        Me.Controls.Add(Me.gbxRicerca)
         Me.Name = "Form1"
         Me.Text = "eBrica"
         Me.gbxUTEC.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbxRicerca.ResumeLayout(False)
+        Me.gbxRicerca.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -75,4 +129,9 @@ Partial Class Form1
     Friend WithEvents btmExit As Button
     Friend WithEvents gbxUTEC As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txbNumero As TextBox
+    Friend WithEvents gbxRicerca As GroupBox
+    Friend WithEvents lbl01 As Label
+    Friend WithEvents txbUtente As TextBox
+    Friend WithEvents lbl02 As Label
 End Class
