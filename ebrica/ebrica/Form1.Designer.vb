@@ -27,9 +27,9 @@ Partial Class Form1
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.txbNumero = New System.Windows.Forms.TextBox()
         Me.gbxRicerca = New System.Windows.Forms.GroupBox()
+        Me.lbl02 = New System.Windows.Forms.Label()
         Me.lbl01 = New System.Windows.Forms.Label()
         Me.txbUtente = New System.Windows.Forms.TextBox()
-        Me.lbl02 = New System.Windows.Forms.Label()
         Me.gbxUTEC.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxRicerca.SuspendLayout()
@@ -83,6 +83,15 @@ Partial Class Form1
         Me.gbxRicerca.TabStop = False
         Me.gbxRicerca.Text = "Ricerca"
         '
+        'lbl02
+        '
+        Me.lbl02.AutoSize = True
+        Me.lbl02.Location = New System.Drawing.Point(67, 30)
+        Me.lbl02.Name = "lbl02"
+        Me.lbl02.Size = New System.Drawing.Size(39, 13)
+        Me.lbl02.TabIndex = 5
+        Me.lbl02.Text = "Utente"
+        '
         'lbl01
         '
         Me.lbl01.AutoSize = True
@@ -98,15 +107,6 @@ Partial Class Form1
         Me.txbUtente.Name = "txbUtente"
         Me.txbUtente.Size = New System.Drawing.Size(104, 20)
         Me.txbUtente.TabIndex = 3
-        '
-        'lbl02
-        '
-        Me.lbl02.AutoSize = True
-        Me.lbl02.Location = New System.Drawing.Point(67, 30)
-        Me.lbl02.Name = "lbl02"
-        Me.lbl02.Size = New System.Drawing.Size(39, 13)
-        Me.lbl02.TabIndex = 5
-        Me.lbl02.Text = "Utente"
         '
         'Form1
         '
