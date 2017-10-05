@@ -22,7 +22,7 @@ Partial Class Form1
     'Non modificarla mediante l'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btmExit = New System.Windows.Forms.Button()
+        Me.btm_Classe = New System.Windows.Forms.Button()
         Me.gbxUTEC = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.txbNumero = New System.Windows.Forms.TextBox()
@@ -30,19 +30,21 @@ Partial Class Form1
         Me.lbl02 = New System.Windows.Forms.Label()
         Me.lbl01 = New System.Windows.Forms.Label()
         Me.txbUtente = New System.Windows.Forms.TextBox()
+        Me.btn_diretta = New System.Windows.Forms.Button()
+        Me.btnForm2 = New System.Windows.Forms.Button()
         Me.gbxUTEC.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxRicerca.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btmExit
+        'btm_Classe
         '
-        Me.btmExit.Location = New System.Drawing.Point(835, 510)
-        Me.btmExit.Name = "btmExit"
-        Me.btmExit.Size = New System.Drawing.Size(75, 23)
-        Me.btmExit.TabIndex = 0
-        Me.btmExit.Text = "Exit"
-        Me.btmExit.UseVisualStyleBackColor = True
+        Me.btm_Classe.Location = New System.Drawing.Point(198, 443)
+        Me.btm_Classe.Name = "btm_Classe"
+        Me.btm_Classe.Size = New System.Drawing.Size(169, 23)
+        Me.btm_Classe.TabIndex = 0
+        Me.btm_Classe.Text = "connessione via classe"
+        Me.btm_Classe.UseVisualStyleBackColor = True
         '
         'gbxUTEC
         '
@@ -57,10 +59,11 @@ Partial Class Form1
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
+        Me.DataGridView1.Location = New System.Drawing.Point(5, 19)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(365, 193)
+        Me.DataGridView1.Size = New System.Drawing.Size(366, 193)
         Me.DataGridView1.TabIndex = 0
         '
         'txbNumero
@@ -76,7 +79,7 @@ Partial Class Form1
         Me.gbxRicerca.Controls.Add(Me.lbl01)
         Me.gbxRicerca.Controls.Add(Me.txbUtente)
         Me.gbxRicerca.Controls.Add(Me.txbNumero)
-        Me.gbxRicerca.Location = New System.Drawing.Point(12, 441)
+        Me.gbxRicerca.Location = New System.Drawing.Point(12, 374)
         Me.gbxRicerca.Name = "gbxRicerca"
         Me.gbxRicerca.Size = New System.Drawing.Size(180, 92)
         Me.gbxRicerca.TabIndex = 3
@@ -108,13 +111,33 @@ Partial Class Form1
         Me.txbUtente.Size = New System.Drawing.Size(104, 20)
         Me.txbUtente.TabIndex = 3
         '
+        'btn_diretta
+        '
+        Me.btn_diretta.Location = New System.Drawing.Point(198, 374)
+        Me.btn_diretta.Name = "btn_diretta"
+        Me.btn_diretta.Size = New System.Drawing.Size(169, 23)
+        Me.btn_diretta.TabIndex = 4
+        Me.btn_diretta.Text = "connessione diretta"
+        Me.btn_diretta.UseVisualStyleBackColor = True
+        '
+        'btnForm2
+        '
+        Me.btnForm2.Location = New System.Drawing.Point(198, 308)
+        Me.btnForm2.Name = "btnForm2"
+        Me.btnForm2.Size = New System.Drawing.Size(169, 23)
+        Me.btnForm2.TabIndex = 5
+        Me.btnForm2.Text = "form2"
+        Me.btnForm2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(922, 545)
+        Me.ClientSize = New System.Drawing.Size(922, 472)
+        Me.Controls.Add(Me.btnForm2)
+        Me.Controls.Add(Me.btn_diretta)
         Me.Controls.Add(Me.gbxUTEC)
-        Me.Controls.Add(Me.btmExit)
+        Me.Controls.Add(Me.btm_Classe)
         Me.Controls.Add(Me.gbxRicerca)
         Me.Name = "Form1"
         Me.Text = "eBrica"
@@ -126,7 +149,7 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents btmExit As Button
+    Friend WithEvents btm_Classe As Button
     Friend WithEvents gbxUTEC As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents txbNumero As TextBox
@@ -134,4 +157,6 @@ Partial Class Form1
     Friend WithEvents lbl01 As Label
     Friend WithEvents txbUtente As TextBox
     Friend WithEvents lbl02 As Label
+    Friend WithEvents btn_diretta As Button
+    Friend WithEvents btnForm2 As Button
 End Class

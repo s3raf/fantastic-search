@@ -1,23 +1,31 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class mysqlConn
+Public Class MySqlConn
     Private _conn As MySqlConnection
 
-    Public Sub connect()
+    Public Sub Connect()
         Dim databaseName As String = "utenti"
         Dim server As String = "192.168.0.200"
-        Dim username As String = "..." 'inserire valore prima di compilare
+        Dim username As String = "prv" 'inserire valore prima di compilare
         Dim password As String = "..." 'inserire valore prima di compilare
 
+
         If Not _conn Is Nothing Then _conn.Close()
-        _conn.ConnectionString = String.Format("server-{0}; username-{1}; password-{2}; database-{3}; pooling-false", server, username, password, databaseName)
+        _conn.ConnectionString = "server=192.168.0.200;user id=prv;password=...;database=utenti"
+        '_conn.ConnectionString = String.Format("server={0}; user id={1}; password={2}; database={3}; pooling=false", server, username, password, databaseName)
+
         Try
             _conn.Open()
-            MsgBox("connected")
-        Catch ex As Exception
-            MsgBox(ex.ToString)
+            MsgBox("connection successfully!!!")
+            _conn.Close()
+            MsgBox("disconnected")
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+
+        Finally
+            _conn.Dispose()
 
         End Try
-        'la connessione no viene chiusa nella classe 
+
     End Sub
 
     Public Property conn As MySqlConnection
