@@ -43,4 +43,5 @@
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         FindItem()
     End Sub
+
 End Class
